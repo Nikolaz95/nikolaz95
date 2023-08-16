@@ -1,0 +1,187 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: rgb(172, 2, 2);
+    
+} 
+
+.navbar a:hover{
+    color: aqua;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+
+/* video iza */
+.backgroundvideo {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vw;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+/* contact form */
+
+.contact {
+/*     margin-bottom: 3rem;
+ */    text-align: center;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+/*     margin-bottom: 3rem;
+ */}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form .btn {
+    margin-top: 1rem;
+    
+}
+
+/* contact finish */
+
+/* foter */
+
+.foter {
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(71, 51, 51);
+    gap: 20px;
+}
+
+/* ham menu */
+
+.ham {
+    display: none; 
+    padding:5px;  
+    cursor:pointer;
+}
+
+.bar1,.bar2,.bar3{  
+    display:block;  
+    width:35px;  
+    height:3px;  
+    margin:5px auto;  
+    background-color:#101010;  
+    transition: 0.4s;  
+   }
+
+   @media only screen and (max-width:1200px) {
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    /* mora imati i stari kod od linka */
+    .navbar{  
+        display: none;
+        position:absolute;   
+        top:10vh;  
+        right:8px;  
+        flex-direction:column;  
+        background-color:rgba(187, 13, 13, 0.185);  
+        border-radius:0px 0px 0px 20px;  
+        transition: 3s ease;  
+        transform:translate(100%);    
+        width: 300px;
+       }
+
+       .nav-change { 
+        display: flex; 
+        position:absolute;   
+        top:10vh;  
+        right:40px;  
+        flex-direction:column;  
+        background-color:rgba(75, 10, 255, 0.357);  
+        border-radius:0px 0px 0px 20px;
+        transition:transform 1s ease-in;
+        transform:translate(0%);  
+        width: 90%;
+       }  
+
+       .ham{  
+        display:block;  
+       }
+
+       .change .bar1 {  
+        transform: rotate(45deg) translate(8px,3px);  
+       }  
+       .change .bar2 {  
+        opacity: 0;  
+       }  
+       .change .bar3 {  
+        transform: rotate(-45deg) translate(8px,-3px);  
+       }
+   }
+
+   /* ham menu */
