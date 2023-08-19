@@ -80,6 +80,80 @@ section {
     }
 }
 
+.social-media {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 30px;
+    transform: 1s;
+}
+
+
+.linkbox:hover {
+    transform: scale(1.3);
+    z-index: 2;
+}
+
+
+
+/* home code end */
+
+
+/* about code */
+
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    color: rgb(255, 255, 255); 
+    margin-bottom: 20px;
+}
+
+.about-text p{
+    color: rgb(255, 255, 255);
+    font-size: 30px; 
+}
+
+.about-text h2{
+    color: rgb(255, 255, 255);
+    font-size: 60px; 
+}
+
+.skils-text {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.skils {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transform: 1s;
+}
+
+.skils:hover {
+    transform: scale(1.3);
+    z-index: 2;
+}
+
+/* icon skils */
+
+.icon-skils {
+    display: flex;
+    gap: 20px;
+    
+}
+
+
+
 /* buton i za submit u contact */
 .btn {
     box-shadow: 0px 10px 14px -7px #276873;
@@ -112,15 +186,134 @@ section {
 
 /* kraj kod a buton */
 
-.about {
+
+/* My work section */
+
+
+.mywork-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     justify-content: center;
-    align-items: center;
-    gap: 40px;
+    gap: 30px;
+    padding-top: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* width: 100px;
+    height: 100px; */
+}
+
+.mywork-box {
+    background-color: whitesmoke;
+    padding: 1.25rem;
+    border-radius: 20px;
+}
+
+.work-img {
+    width: 100%;
+    height: 70%;
 }
 
 
+/* da sakrijem opis projekta */
+.portfolio-item-details {
+    display: none;
+}
+
+.work-img {
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.work-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.work-button {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+}
+
+.work-button-icon {
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.work-button-icon:hover .work-button-icon {
+    transform: translateY( 25rem);
+}
+
+/* Porfolio popup */
+
+.portfolio-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.portfolio-popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-popup-inner {
+    background-color: rgb(89, 175, 32);
+    width: 900px;
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.portfolio-popup-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.portfolio-popup-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: red;
+}
+
+.profile-popup-img {
+    border-radius: 20px;
+}
+
+.portfolio-popup-subtitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.details-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.details-description {
+    margin-bottom: 20px;
+}
+
+.detail-info li{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
 
 
 /* contact form */
