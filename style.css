@@ -187,133 +187,144 @@ section {
 /* kraj kod a buton */
 
 
-/* My work section */
 
 
-.mywork-container {
-    display: grid;
-    justify-content: center;
-    gap: 30px;
-    padding-top: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* width: 100px;
-    height: 100px; */
-}
+/* work card  */
 
-.mywork-box {
-    background-color: whitesmoke;
-    padding: 1.25rem;
+.work-card {
+    background-color: yellowgreen;
+    padding: 2rem;
     border-radius: 20px;
+    height: 300px;
 }
 
 .work-img {
-    width: 100%;
+    display: flex;
+    border-radius: 20px;
+    width: 90%;
     height: 70%;
-}
-
-
-/* da sakrijem opis projekta */
-.portfolio-item-details {
-    display: none;
-}
-
-.work-img {
-    border-radius: 20px;
-    margin-bottom: 30px;
-}
-
-.work-title {
-    font-size: 30px;
     margin-bottom: 20px;
 }
 
-.work-button {
-    display: flex;
-    color: white;
+.produkt-title {
     font-size: 20px;
-    align-items: center;
+    color: white;
+    margin-bottom: 20px;
 }
 
-.work-button-icon {
-    font-size: 1rem;
+.produkt-btn {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.arrow {
+    font-size: 20px;
     transition: .3s;
 }
 
-.work-button-icon:hover .work-button-icon {
-    transform: translateY( 25rem);
+.arrow:hover {
+    transform: translateX(.25rem);
 }
 
-/* Porfolio popup */
 
-.portfolio-popup {
+
+
+/* popup style */
+
+
+.header-mywork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-size: 3rem;
+}
+
+.container-work {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 10%;
+}
+
+.popup-view {
+    /* display: none; */
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 100;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.508);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 0 1rem;
+    z-index: 1;
     transition: .3s;
-    opacity: 0;
     visibility: hidden;
-
 }
 
-.portfolio-popup.open {
+ .active{
     opacity: 1;
     visibility: visible;
 }
 
-.portfolio-popup-inner {
-    background-color: rgb(89, 175, 32);
+.popup-inner {
+    background-color: rgb(98, 110, 40);
     width: 900px;
     border-radius: 20px;
     padding: 2.5rem;
     position: relative;
 }
 
-.portfolio-popup-content {
+.popup-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 3rem;
 }
 
-.portfolio-popup-close {
+.close-btn {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
+    font-size: 20px;
     color: red;
+    cursor: pointer;
 }
 
-.profile-popup-img {
+.popup-img {
     border-radius: 20px;
 }
 
-.portfolio-popup-subtitle {
+.popup-innertitle {
     font-size: 30px;
     margin-bottom: 20px;
+    color: rgb(255, 255, 255);
 }
 
-.details-title {
-    font-size: 30px;
+.popup-innertext {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
     margin-bottom: 20px;
 }
 
-.details-description {
+.popup-btn-demo {
+    font-size: 20px;
     margin-bottom: 20px;
+    color: rgb(255, 255, 255);
 }
 
-.detail-info li{
-    list-style-type: none;
-    margin-bottom: 20px;
-}
+
+
+/* popup kraj */
+
+
 
 
 /* contact form */

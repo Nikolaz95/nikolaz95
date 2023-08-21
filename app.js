@@ -11,24 +11,29 @@ hamburger.addEventListener('click', () => {
 /* work popup kod  */
 
 
-document.addEventListener("click", (e) => {
-    if(e.target.classList.contains("work-button")) {
-        togglePortfolioPopup();
-        porfolioItemDetails(e.target.parentElement);
-    }
-})
 
-function togglePortfolioPopup () {
-    document.querySelector(".portfolio-popup").classList.toggle("open");
+
+let popupViews = document.querySelectorAll('.popup-view');
+let popupBtns = document.querySelectorAll('.popup-btn');
+let closeBtns = document.querySelectorAll('.close-btn');
+
+
+//javascript for quick view button
+let popup = function(popupClick){
+    popupViews[popupClick].classList.add('active');
 }
 
-document.querySelector(".portfolio-popup-close").addEventListener("click", togglePortfolioPopup)
+popupBtns.forEach((popupBtn, i) => {
+    popupBtn.addEventListener("click", () => {
+    popup(i);
+    });
+});
 
-
-function porfolioItemDetails(portfolioItem) {
-    document.querySelector("pp-thumnail").src = portfolioItem.querySelector(".work-img").src;
-
-    document.querySelector(".portfolio-popup-subtitle span").innerHTML = portfolioItem.querySelector(".work-title").innerHTML;
-
-    document.querySelector(".portfolio-popup-body").innerHTML = portfolioItem.querySelector(".details-title").innerHTML;
-}
+//javascript for close button
+closeBtns.forEach((closeBtn) => {
+    closeBtn.addEventListener("click", () => {
+    popupViews.forEach((popupView) => {
+        popupView.classList.remove('active');
+    });
+    });
+});
