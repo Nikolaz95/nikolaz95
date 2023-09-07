@@ -657,65 +657,64 @@
     <!-- contact section -->
 
     <section class="contact" id="contact">
-      
-      
       <h1 class="conctact-hd">Contact Me</h1>
 
       <div class="container-contact">
-
         <form onsubmit="sendEmail (); reset(); return false;">
-
           <div class="input-group">
-
             <label for="conctact-name">Full Name :</label>
 
-            <input type="text" placeholder="Full Name..." id="conctact-name" onkeyup="validateName()">
+            <input
+              type="text"
+              placeholder="Full Name..."
+              id="conctact-name"
+              onkeyup="validateName()"
+            />
             <span id="name-error"></span>
-
           </div>
 
           <div class="input-group">
-
             <label for="conctact-email">Email :</label>
 
-            <input type="email" placeholder="Email..."
-            id="conctact-email" onkeyup="validateEmail()">
+            <input
+              type="email"
+              placeholder="Email..."
+              id="conctact-email"
+              onkeyup="validateEmail() "
+            />
             <span id="email-error"></span>
-
           </div>
 
           <div class="input-group">
-
             <label for="conctact-emailsub">Email Subject :</label>
 
-            <input type="text"  placeholder="Email Subject..." id="conctact-emailsub" onkeyup="validateEmailSub()">
-            
-            <span id="emailSub-error"></span>
+            <input
+              type="text"
+              placeholder="Email Subject..."
+              id="conctact-emailsub"
+              onkeyup="validateEmailSub()"
+            />
 
+            <span id="emailSub-error"></span>
           </div>
 
-
           <div class="input-group">
-
             <label for="conctact-message">Your Message</label>
 
-            <textarea  rows="5" placeholder="Your Message..."
-            id="conctact-message" onkeyup="validateMessage()"></textarea>
+            <textarea
+              rows="5"
+              placeholder="Your Message..."
+              id="conctact-message"
+              onkeyup="validateMessage()"
+            ></textarea>
             <span id="text-error"></span>
-
           </div>
 
           <button class="sb-btn" onclick="return validateForm()">Submit</button>
 
           <span id="submit-error"></span>
-
-
         </form>
       </div>
-
-
-
-
     </section>
 
     <footer class="foter">

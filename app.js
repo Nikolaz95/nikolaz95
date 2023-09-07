@@ -59,8 +59,9 @@ function validateName() {
         nameError.innerHTML = 'Name is required';
         return false;
     }
+     // /^[A-Z][A-Za-z0-9_-]{3,19}$/
 
-    if (!name.match (/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+    if (!name.match ( /^[A-z][A-Za-z]*\s{1}[A-z][A-Za-z]*$/)) {
         nameError.innerHTML = 'Write full name';
         return false;
     }
@@ -104,6 +105,33 @@ function validateEmailSub() {
     return true;
 }
 
+function emptyv(){
+
+    var fconst = document.getElementById("submit-error");
+     
+    consfa = false,
+    document.querySelectorAll(".input-group input").forEach(function(v){
+        if(!v.value == ""){
+            consfa = true;
+        } else{
+            consfa = false;
+        }
+    });
+
+    var txtv = document.querySelector(".conctact-name #conctact-message")
+    if(!txtv.innerHTML == "") {
+        consfa = true;  
+    } else {
+            consfa = false;
+    }    
+
+    if(!consfa){
+        fconst.removeAttribute("style");
+    } else{
+        fconst.style.display = "none";
+    }
+
+}
 
 function  validateMessage () {
     let message = document.getElementById('conctact-message').value;
@@ -121,9 +149,11 @@ function  validateMessage () {
 }
 
 function validateForm() {
-    if(!validateName() || !validateEmail() || !validateMessage ()){
+    if(!validateName() && !validateEmail() && !validateMessage () && !validateEmailSub () ){
         submitError.innerHTML = 'Please fix error to submit   <i class="fa-solid fa-circle-exclamation fa-beat fa-lg" style="color: #ff0000;"></i>';
         return false;
+    } else{
+             submitError.innerHTML = '';
     }
 }
 
