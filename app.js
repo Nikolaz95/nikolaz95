@@ -158,5 +158,4 @@ function validateForm() {
 }
 
 
-/* function send email */
 
