@@ -314,9 +314,15 @@ section {
 }
 
 .popup-innertext {
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
+}
+
+.inner-poputext {
+    margin-top: 20px;
+    font-size: 25px;
     margin-bottom: 20px;
+    
 }
 
 .popup-btn-demo {
