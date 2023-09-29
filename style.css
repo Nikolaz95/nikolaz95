@@ -20,8 +20,12 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-}
 
+}
+body {
+    overflow-x:hidden;
+    
+}
 
 .header{
     position: fixed;
@@ -473,7 +477,7 @@ button:hover {
 
    /* responsive */
 
-   @media only screen and (max-width: 480px) {
+   @media  screen and (max-width: 600px) {
 
     .header {
         display: flex;
@@ -586,15 +590,23 @@ button:hover {
         
     }
 
+    .work-card {
+        padding-left: 60px;
+    }
+
+    
     .popup-view {
         display: grid;
         grid-template-columns: 1fr;
     }
-
+    
     .active{
         opacity: 1;
         visibility: visible;
     }
+    
+    .popup-view.active {padding:4% !important;} 
+
 
     .popup-inner {
         background-color: transparent;
@@ -605,14 +617,14 @@ button:hover {
     }
 
     .popup-img {
-        width: 400px;
+        width: 300px;
     }
 
     .popup-content {
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
-        align-self: center;
+        padding-left: 30px;
         column-gap: 3rem;
         width: 300px;
     }
@@ -620,7 +632,7 @@ button:hover {
     .close-btn {
         position: absolute;
         top: 1rem;
-        right: -12rem;
+        right: -14rem;
         font-size: 20px;
         color: rgb(255, 255, 255);
         cursor: pointer;
@@ -666,7 +678,7 @@ button:hover {
 
    /* Medium devices (landscape tablets, 768px and up) */
 
-   @media only screen and (max-width:768px) {
+   @media  screen and (max-width: 768px) {
 
     .header {
         display: flex;
@@ -729,7 +741,6 @@ button:hover {
       }
 
       .link-dnw {
-        /* display: flex; */
         flex-direction: column;
         justify-content: space-around;
       }
@@ -774,9 +785,12 @@ button:hover {
     /* my work 768px */
 
     .container-work {
-        display: flex;
-        flex-direction: column;
-        
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .work-card {
+        padding-left: 80px;
     }
 
     .popup-view {
@@ -788,6 +802,14 @@ button:hover {
         opacity: 1;
         visibility: visible;
     }
+
+    .popup-view.active {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 130px;
+    }
+
+    .popup-view.active {padding: 12.5%;}
 
     .popup-inner {
         background-color: transparent;
@@ -805,15 +827,16 @@ button:hover {
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
-        align-self: center;
+        align-items: center;
         column-gap: 3rem;
+        padding-left: 50px;
         width: 300px;
     }
 
     .close-btn {
         position: absolute;
         top: 1rem;
-        right: -12rem;
+        right: -13rem;
         font-size: 20px;
         color: rgb(255, 255, 255);
         cursor: pointer;
@@ -853,12 +876,140 @@ button:hover {
 
    }
 
-   /* Large devices (laptops/desktops, 992px and up) */
+   /* Large devices (laptops/desktops, 900px and up) */
 
 
+   @media  screen and (max-width:900px) {
 
-   
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+    
 
+
+    /* home 900px */
+
+    .home {
+        display:flex;
+        flex-direction: column-reverse;
+      }
+
+      .profile-img {
+        width: 99%;
+        height: 99%;
+      }
+
+      .link-dnw {
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .link-dnw a {
+        margin-bottom: 20px;
+      }
+
+    /* about 900px  */
+
+    .about-img {
+        width: 99%;
+        height: 99%;
+    }
+
+
+    .about {
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        gap: 40px;
+    }
+
+    .headin2 {
+        text-align: center;
+    }
+
+    .about-content {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-skils {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* my work 900px */
+
+
+    .container-work {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .work-card {
+        width: 400px;
+        margin: auto;
+    }
+
+    .popup-view {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .active{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup-view.active {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-left: 130px;
+    }
+
+    .popup-inner {
+        background-color: transparent;
+        width: 200px;
+        border-radius: 20px;
+        padding: 2.5rem;
+        position: relative;
+    }
+
+    .popup-img {
+        width: 400px;
+    }
+
+    .popup-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        column-gap: 3rem;
+        padding-left: 50px;
+        width: 300px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 1rem;
+        right: -13rem;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+
+    .info {
+        justify-content: center;
+        align-items: center;
+    }
+
+
+   }
+
+
+ 
 
 
    @media only screen and (max-width:1200px) {
@@ -870,6 +1021,8 @@ button:hover {
 
 
     /* mora imati i stari kod od linka */
+
+    
     .navbar{  
         display: none;
         position:absolute;   
@@ -910,8 +1063,37 @@ button:hover {
        }  
        .change .bar3 {  
         transform: rotate(-45deg) translate(8px,-3px);  
-       }
+       } 
+       
+       
    }
 
    /* ham menu */
 
+
+   @media only screen and (min-width:900px) {
+    .container-work {
+        grid-template-columns: 1fr 1fr !important;
+    }
+       }
+    
+       @media only screen and (min-width:1400px) {
+    .container-work {
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+       }
+
+
+
+     
+           @media only screen and (min-width:1400px) {
+        .about-text p {
+            max-width: 70%;
+        }
+           }
+           @media only screen and (max-width:900px) {
+        
+        .about-text p {
+        text-align:center;
+        }
+           }

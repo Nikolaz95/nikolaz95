@@ -5,6 +5,7 @@ const navsub = document.querySelector(".navbar");
 hamburger.addEventListener('click', () => {  
  hamburger.classList.toggle("change")  
  navsub.classList.toggle("nav-change")  
+ 
 });  
 
 
@@ -12,26 +13,38 @@ hamburger.addEventListener('click', () => {
 
 
 let popupViews = document.querySelectorAll('.popup-view');
+let popupViewActive = document.querySelector('.popup-view.active');
 let popupBtns = document.querySelectorAll('.popup-btn');
 let closeBtns = document.querySelectorAll('.close-btn');
 
-
+ 
+let removeHumb = function(){
+    document.querySelector(".navbar.nav-change").classList.remove("nav-change");
+    hamburger.classList.toggle("change")    
+}
 //javascript for quick view button
 let popup = function(popupClick){
     popupViews[popupClick].classList.add('active');
+    popupViews[popupClick].setAttribute("onclick","closeme()");
 }
-
+let closeme = function(){
+    popupViews.forEach((popupView) => {
+        popupView.classList.remove('active');
+    });
+}
 popupBtns.forEach((popupBtn, i) => {
     popupBtn.addEventListener("click", () => {
     popup(i);
     });
 });
-
+ 
 //javascript for close button
 closeBtns.forEach((closeBtn) => {
     closeBtn.addEventListener("click", () => {
     popupViews.forEach((popupView) => {
         popupView.classList.remove('active');
+        popupViews[popupClick].removeAttribute("onclick");
+
     });
     });
 });
